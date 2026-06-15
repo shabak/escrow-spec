@@ -146,7 +146,7 @@ The hardest part is the relayer (idempotency, failure handling) and storing the 
 
 Three kinds of cost: build (one-time), maintenance per year (recurring), and operational (per operation). The audit is separate (section 10).
 
-**Build cost (one-time).** Solo development at \$60/h, 40 h/week (\$2,400/week); the audit is not included. From the timeline (section 9): ~2 weeks = ~80 h → **~\$4,800**.
+**Build cost (one-time).** Solo development at \$60/h, 40 h/week (\$2,400/week); the audit is not included. From the timeline (section 9): ~3–3.5 weeks = ~120–140 h → **~\$7,200–8,400**.
 
 **Maintenance per year.** Infrastructure + support + key custody + cost of capital:
 - infrastructure (Go relayer, monitoring): ~\$1–2k/year;
@@ -183,7 +183,7 @@ There is no bridge fee on any operation. deposit and withdraw — Base gas only.
 
 **Conclusion:** by operational cost this is the cheapest of the three — there is no bridge fee at all. The real price of Variant 2 is not here but in the locked capital (section 5).
 
-## 9. Solo timeline
+## 9. Timeline
 
 An estimate for one full-time developer, not a commitment. The audit is not included.
 
@@ -193,8 +193,9 @@ An estimate for one full-time developer, not a commitment. The audit is not incl
 | Mirror contract on Etherlink | 0.2–0.3 |
 | Go relayer (the main part) | 0.5–0.8 |
 | Custodial infrastructure | 0.3–0.5 |
+| Tests, testnet, monitoring, relayer infra | 1–1.5 |
 
-**Total: ~2 weeks.** The contracts are simpler than in Variant 1 (no bridge integration), but the Go relayer and the custodial wrapping are added — the main volume and risk are there (idempotency, failure handling, key storage).
+**Total: ~3–3.5 weeks.** The contracts are simpler than in Variant 1 (no bridge integration), but the Go relayer and the custodial wrapping are added — the main volume and risk are there (idempotency, failure handling, key storage).
 
 ## 10. Audit scope and cost
 

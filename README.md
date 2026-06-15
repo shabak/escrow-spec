@@ -32,13 +32,13 @@ solo timeline, audit scope & cost, pros/cons, and open questions.
 
 | Variant | Build (one-time) | Maintenance / year |
 |---|---|---|
-| **1. Canonical Bridge** | ~\$6–9.6k | ~\$2–4k |
-| **2. Event-Driven Mirror** | ~\$4.8k | ~\$5–9k + ~10% of locked capital |
-| **3. Batched Settlement** | ~\$7.2–9.6k | ~\$8–13.5k + ~10% of the buffer |
+| **1. Canonical Bridge** | ~\$8.4–13.2k | ~\$2–4k |
+| **2. Event-Driven Mirror** | ~\$7.2–8.4k | ~\$5–9k + ~10% of locked capital |
+| **3. Batched Settlement** | ~\$10.8–14.4k | ~\$8–13.5k + ~10% of the buffer |
 
 Build is one-time solo development at \$60/h, 40 h/week. The hours per variant come from
-the solo timeline (section 9 of each spec). The audit is not included; it is a separate
-one-time cost (section 10 of each spec).
+the solo timeline (section 9 of each spec), which includes tests, testnet, and monitoring
+setup. The audit is not included; it is a separate one-time cost (section 10 of each spec).
 
 Maintenance per year is the sum of four items:
 

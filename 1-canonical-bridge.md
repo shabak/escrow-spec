@@ -180,7 +180,7 @@ The hardest spots: reliable message delivery with failure handling; the return p
 
 Three kinds of cost: build (one-time), maintenance per year (recurring), and operational (per operation). The audit is separate (section 10).
 
-**Build cost (one-time).** Solo development at \$60/h, 40 h/week (\$2,400/week); the audit is not included. From the timeline (section 9): ~2.5–4 weeks = ~100–160 h → **~\$6,000–9,600**.
+**Build cost (one-time).** Solo development at \$60/h, 40 h/week (\$2,400/week); the audit is not included. From the timeline (section 9): ~3.5–5.5 weeks = ~140–220 h → **~\$8,400–13,200**.
 
 **Maintenance per year.** Variant 1 runs no relayer of our own and locks none of our capital, so it is the lowest of the three:
 - infrastructure (contract monitoring, a light keeper): ~\$0.5–1k/year;
@@ -216,7 +216,7 @@ deposit is almost free. allocate pays for the bridge once. withdraw and refund �
 
 The main item is the bridge fee, not gas. **Conclusion:** of the three variants this one is the most expensive in operational cost: we pay for the bridge on every operation with a transfer, and this cannot be reduced — the transfer is built into the scheme.
 
-## 9. Solo timeline
+## 9. Timeline
 
 An estimate for one full-time developer, not a commitment. It depends on the choice of bridge (section 3) and on how the open questions are closed.
 
@@ -227,10 +227,11 @@ An estimate for one full-time developer, not a commitment. It depends on the cho
 | Bridge integration | 0.7–1 |
 | preimage+Merkle, timelocks/refund | 0.3–0.7 |
 | Handling cross-chain failures | 0.7–1 |
+| Tests, testnet, monitoring | 1–1.5 |
 
 The parts overlap (integration and failure handling are done together), so the sum of the rows and the total need not match.
 
-**Total: ~2.5–4 weeks.** Variant 1 leans on a ready-made bridge — no relayer of our own to write, which lowers the timeline. The audit is not included in the estimate.
+**Total: ~3.5–5.5 weeks.** Variant 1 leans on a ready-made bridge — no relayer of our own to write, which lowers the timeline. The audit is not included in the estimate.
 
 ## 10. Audit scope and cost
 

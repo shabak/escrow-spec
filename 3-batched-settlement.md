@@ -139,7 +139,7 @@ The hardest part is solvency accounting, the queue, and the batch rebalance.
 
 Three kinds of cost: build (one-time), maintenance per year (recurring), and operational (per operation). The audit is separate (section 10).
 
-**Build cost (one-time).** Solo development at \$60/h, 40 h/week (\$2,400/week); the audit is not included. From the timeline (section 9): ~3–4 weeks = ~120–160 h → **~\$7,200–9,600**.
+**Build cost (one-time).** Solo development at \$60/h, 40 h/week (\$2,400/week); the audit is not included. From the timeline (section 9): ~4.5–6 weeks = ~180–240 h → **~\$10,800–14,400**.
 
 **Maintenance per year.** Infrastructure + support + key custody + cost of capital; the highest support load of the three, because solvency accounting and the batch rebalance need watching:
 - infrastructure (relayer, monitoring, batch rebalance): ~\$1–2k/year;
@@ -177,7 +177,7 @@ There is no token transfer on any operation — it goes in batches separately, o
 
 **Conclusion:** cheaper than Variant 1 (there tokens go through the bridge on each operation), more expensive than Variant 2 (there there are no transfers of the user's money between networks at all). The rarer and larger the batches, the cheaper per operation, but the more liquidity is locked or in flight. Our capital is minimal; the buffer is a separate locked part (section 5).
 
-## 9. Solo timeline
+## 9. Timeline
 
 An estimate for a single full-time developer, not a commitment. The audit is not included.
 
@@ -189,8 +189,9 @@ An estimate for a single full-time developer, not a commitment. The audit is not
 | Batching and rebalance | 0.5–0.7 |
 | Messaging per operation | 0.3–0.5 |
 | Failure handling | 0.5–0.7 |
+| Tests, testnet, monitoring, relayer infra | 1.5–2 |
 
-**Total: ~3–4 weeks.** Variant 3 is the hardest of the three, the main weight and risk are in solvency accounting and the batch rebalance. This is an estimate, not a measurement.
+**Total: ~4.5–6 weeks.** Variant 3 is the hardest of the three, the main weight and risk are in solvency accounting and the batch rebalance. This is an estimate, not a measurement.
 
 ## 10. Audit scope and cost
 

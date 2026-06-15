@@ -137,7 +137,18 @@ The hardest part is solvency accounting, the queue, and the batch rebalance.
 
 ## 8. Cost
 
-Operationally low–medium — per operation we pay only for cheap messages and gas; the expensive token movement goes in batches, rarely.
+Three kinds of cost: build (one-time), maintenance per year (recurring), and operational (per operation). The audit is separate (section 10).
+
+**Build cost (one-time).** Solo development at \$60/h, 40 h/week (\$2,400/week); the audit is not included. From the timeline (section 9): ~3–4 weeks = ~120–160 h → **~\$7,200–9,600**.
+
+**Maintenance per year.** Infrastructure + support + key custody + cost of capital; the highest support load of the three, because solvency accounting and the batch rebalance need watching:
+- infrastructure (relayer, monitoring, batch rebalance): ~\$1–2k/year;
+- support at \$60/h: ~10–16 h/month → ~\$7.2–11.5k/year;
+- key custody (self-custody multisig on the buffer and the pool): little hard cost;
+- cost of capital — only on the buffer, which is small: buffer × ~10%/year. Example: at \$20k buffer → ~\$2k/year.
+- **~\$8–13.5k/year fixed, plus a small cost of capital on the buffer.**
+
+**Operational (per operation).** Operationally low–medium — per operation we pay only for cheap messages and gas; the expensive token movement goes in batches, rarely.
 
 **Per operation:**
 

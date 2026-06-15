@@ -178,7 +178,18 @@ The hardest spots: reliable message delivery with failure handling; the return p
 
 ## 8. Cost
 
-On every operation except deposit we pay for the transfer between chains. The cost of an operation with a transfer = bridge fee + Base gas + Etherlink gas. If the transfer is needed there and back, all of this doubles: the return path is a second full payment, not a small addition.
+Three kinds of cost: build (one-time), maintenance per year (recurring), and operational (per operation). The audit is separate (section 10).
+
+**Build cost (one-time).** Solo development at \$60/h, 40 h/week (\$2,400/week); the audit is not included. From the timeline (section 9): ~2.5–4 weeks = ~100–160 h → **~\$6,000–9,600**.
+
+**Maintenance per year.** Variant 1 runs no relayer of our own and locks none of our capital, so it is the lowest of the three:
+- infrastructure (contract monitoring, a light keeper): ~\$0.5–1k/year;
+- support at \$60/h: ~2–4 h/month → ~\$1.4–2.9k/year;
+- key custody: none of significance — trust is on the bridge, not on our keys;
+- cost of capital: none — we lock none of our own capital.
+- **~\$2–4k/year.**
+
+**Operational (per operation).** On every operation except deposit we pay for the transfer between chains. The cost of an operation with a transfer = bridge fee + Base gas + Etherlink gas. If the transfer is needed there and back, all of this doubles: the return path is a second full payment, not a small addition.
 
 By operation:
 

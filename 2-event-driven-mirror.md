@@ -144,7 +144,18 @@ The hardest part is the relayer (idempotency, failure handling) and storing the 
 
 ## 8. Cost
 
-Here there is only the operational cost — what each operation costs. The cost of locked capital (the main price of Variant 2) is in section 5. We pay for gas; there is no bridge fee, because the user's money does not go through a bridge.
+Three kinds of cost: build (one-time), maintenance per year (recurring), and operational (per operation). The audit is separate (section 10).
+
+**Build cost (one-time).** Solo development at \$60/h, 40 h/week (\$2,400/week); the audit is not included. From the timeline (section 9): ~2 weeks = ~80 h → **~\$4,800**.
+
+**Maintenance per year.** Infrastructure + support + key custody + cost of capital:
+- infrastructure (Go relayer, monitoring): ~\$1–2k/year;
+- support at \$60/h: ~6–10 h/month → ~\$4.3–7.2k/year;
+- key custody (self-custody multisig on the funds): little hard cost, the attention is already in the support hours;
+- cost of capital — the main item: the full mirror equals the sum of active allocations (up to the deposit cap), at ~10%/year. Given as a formula because it depends on TVL: locked capital × ~10%/year. Example: at \$100k locked → ~\$10k/year.
+- **~\$5–9k/year fixed, plus the cost of capital — usually the largest part.**
+
+**Operational (per operation).** Here there is only the operational cost — what each operation costs. The cost of locked capital is folded into maintenance above (and detailed in section 5). We pay for gas; there is no bridge fee, because the user's money does not go through a bridge.
 
 **Per operation:**
 

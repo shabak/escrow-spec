@@ -28,6 +28,33 @@ Each document covers: idea, architecture, per-operation flow, stablecoin transfe
 mechanism, trust & security, liquidity/solvency, failure modes, complexity, cost,
 solo timeline, audit scope & cost, pros/cons, and open questions.
 
+## Cost of Build & Maintenance
+
+| Variant | Build (one-time) | Maintenance / year |
+|---|---|---|
+| **1. Canonical Bridge** | ~\$6–9.6k | ~\$2–4k |
+| **2. Event-Driven Mirror** | ~\$4.8k | ~\$5–9k + ~10% of locked capital |
+| **3. Batched Settlement** | ~\$7.2–9.6k | ~\$8–13.5k + ~10% of the buffer |
+
+Build is one-time solo development at \$60/h, 40 h/week. The hours per variant come from
+the solo timeline (section 9 of each spec). The audit is not included; it is a separate
+one-time cost (section 10 of each spec).
+
+Maintenance per year is the sum of four items:
+
+- Infrastructure (server, monitoring): ~\$0.5–1k for Variant 1, ~\$1–2k for Variants 2
+  and 3.
+- Support: hours per month × \$60. ~2–4 h/month for Variant 1, ~6–10 for Variant 2,
+  ~10–16 for Variant 3.
+- Key custody: self-custody multisig; little direct cost, the time is included in the
+  support hours. None for Variant 1.
+- Cost of capital: locked capital × ~10%/year. None for Variant 1; the full mirror for
+  Variant 2; the buffer for Variant 3. The 10% is an assumed annual rate (opportunity or
+  borrowing cost), not a measured figure.
+
+The per-operation running cost is the Running cost column in the table above. Per-variant
+detail is in section 8 of each spec.
+
 ## Recommended path
 
 Of the three approaches, **Variant 2 is the cheapest to run and the simplest to
